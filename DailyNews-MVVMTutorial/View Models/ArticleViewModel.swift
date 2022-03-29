@@ -14,9 +14,11 @@ extension ArticleListViewModel {
     var numberOfSections: Int {
         return 1
     }
+    
     func numberOfRowsInSection(_ section: Int) -> Int {
         return self.articles.count
     }
+    
     func articleIndex(_ index: Int) -> ArticleViewModel {
         let article = self.articles[index]
         return ArticleViewModel(article)

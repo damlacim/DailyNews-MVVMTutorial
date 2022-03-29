@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="b8N-kh-ILR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleTableViewCell" rowHeight="80" id="b8N-kh-ILR" customClass="ArticleTableViewCell" customModule="DailyNews_MVVMTutorial" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b8N-kh-ILR" id="NHt-1m-S7k">
@@ -48,6 +48,10 @@
                                         <constraint firstItem="7jR-w3-fVJ" firstAttribute="top" secondItem="NHt-1m-S7k" secondAttribute="topMargin" id="qtf-I0-KUI"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="J3x-15-Cly" id="c41-LS-d7D"/>
+                                    <outlet property="titleLabel" destination="WkG-za-2Ev" id="6Va-vI-Cjg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
