@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D04EB79D285F9B8100282E64 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04EB79C285F9B8100282E64 /* DetailViewController.swift */; };
 		D0F7A28727F32C33008BEE85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7A28627F32C33008BEE85 /* AppDelegate.swift */; };
 		D0F7A28927F32C33008BEE85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7A28827F32C33008BEE85 /* SceneDelegate.swift */; };
 		D0F7A28E27F32C33008BEE85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F7A28C27F32C33008BEE85 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D04EB79C285F9B8100282E64 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D0F7A28327F32C33008BEE85 /* DailyNews-MVVMTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DailyNews-MVVMTutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F7A28627F32C33008BEE85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0F7A28827F32C33008BEE85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				D0F7A2B727F32FE5008BEE85 /* NewsListTableViewController.swift */,
+				D04EB79C285F9B8100282E64 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				D0F7A28927F32C33008BEE85 /* SceneDelegate.swift in Sources */,
 				D0F7A2C427F34358008BEE85 /* ArticleTableViewCell.swift in Sources */,
 				D0F7A2BE27F33964008BEE85 /* Article.swift in Sources */,
+				D04EB79D285F9B8100282E64 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

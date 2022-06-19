@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class NewsListTableViewController: UITableViewController {
+class NewsListTableViewController: UITableViewController, ArticleViewControllerDelagate {
     
     private var articleListVM: ArticleListViewModel!
     
@@ -18,24 +18,30 @@ class NewsListTableViewController: UITableViewController {
     }
     
     private func setup() {
+        articleListVM = ArticleListViewModel()
+        subscribeViewModel()
+        articleListVM.fetchData()
+    }
+    
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    private func subscribeViewModel() {
         
-        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=tr&apiKey=8b4b61575b454d3595702ea4ca663c08")!
-        
-        
-        WebService().getArticles(url: url) { articles in
+        articleListVM.listenViewModel { [weak self] state in
             
-            if let articles = articles {
-                
-                self.articleListVM = ArticleListViewModel(articles: articles)
-                
+            switch state {
+            case .loading:
+                print("loading")
+            case .done:
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    self?.tableView.reloadData()
                 }
             }
         }
-        
-    
-     
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -53,7 +59,5 @@ class NewsListTableViewController: UITableViewController {
         cell.descriptionLabel.text = articleVM.description
         return cell
     }
-    
-    
     
 }

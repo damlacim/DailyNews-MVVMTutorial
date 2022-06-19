@@ -7,8 +7,42 @@
 
 import Foundation
 
-struct ArticleListViewModel {
-    let articles: [Article]
+enum ViewState {
+    case loading
+    case done
+}
+
+protocol ArticleViewControllerDelagate: AnyObject {
+    
+    func reloadTableView()
+}
+
+class ArticleListViewModel {
+        
+    weak var delegate: ArticleViewControllerDelagate?
+    var articles: [Article]?
+    var viewStateBlock: ((ViewState) -> Void)?
+    
+    
+    func listenViewModel(with completion: @escaping (ViewState) -> Void) {
+        viewStateBlock = completion
+    }
+    
+    func fetchData() {
+       
+       guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=tr&apiKey=8b4b61575b454d3595702ea4ca663c08") else { return }
+       
+        self.viewStateBlock?(.loading)
+       WebService().getArticles(url: url) { articles in
+           
+           if let articles = articles {
+               self.articles = articles
+           }
+//           self.delegate?.reloadTableView()
+           self.viewStateBlock?(.done)
+       }
+   }
+    
 }
 extension ArticleListViewModel {
     var numberOfSections: Int {
@@ -16,31 +50,13 @@ extension ArticleListViewModel {
     }
     
     func numberOfRowsInSection(_ section: Int) -> Int {
-        return self.articles.count
+        return self.articles?.count ?? 0
     }
     
-    func articleIndex(_ index: Int) -> ArticleViewModel {
-        let article = self.articles[index]
-        return ArticleViewModel(article)
+    func articleIndex(_ index: Int) -> Article {
+        guard let article = self.articles?[index] else { return Article(title: "", description: "") }
+        return article
     }
     
 }
 
-struct ArticleViewModel {
-    private let article: Article
-}
-
-extension ArticleViewModel {
-    init(_ article: Article) {
-        self.article = article
-    }
-}
-
-extension ArticleViewModel {
-    var title: String {
-        return self.article.title
-    }
-    var description: String {
-        return self.article.description
-    }
-}
