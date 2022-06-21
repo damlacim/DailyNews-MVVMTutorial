@@ -61,6 +61,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="DailyNews" largeTitleDisplayMode="always" id="6F9-UI-Jk5"/>
+                    <connections>
+                        <segue destination="7aa-Wg-xR8" kind="show" identifier="detail" id="2l6-Z7-mgk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACf-2s-ZOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,6 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="UZz-mm-sk6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sRm-I5-UJN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTk-xG-i6W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

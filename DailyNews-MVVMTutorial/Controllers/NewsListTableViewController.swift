@@ -43,7 +43,9 @@ class NewsListTableViewController: UITableViewController, ArticleViewControllerD
             }
         }
     }
-    
+}
+
+extension NewsListTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return self.articleListVM == nil ? 0 : self.articleListVM.numberOfSections
     }
@@ -60,4 +62,7 @@ class NewsListTableViewController: UITableViewController, ArticleViewControllerD
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detail", sender: nil)
+    }
 }

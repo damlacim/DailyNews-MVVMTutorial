@@ -30,7 +30,9 @@ class ArticleListViewModel {
     
     func fetchData() {
        
-       guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=tr&apiKey=8b4b61575b454d3595702ea4ca663c08") else { return }
+       guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=tr&apiKey=8b4b61575b454d3595702ea4ca663c08") else {
+           return
+       }
        
         self.viewStateBlock?(.loading)
        WebService().getArticles(url: url) { articles in
@@ -38,7 +40,6 @@ class ArticleListViewModel {
            if let articles = articles {
                self.articles = articles
            }
-//           self.delegate?.reloadTableView()
            self.viewStateBlock?(.done)
        }
    }
