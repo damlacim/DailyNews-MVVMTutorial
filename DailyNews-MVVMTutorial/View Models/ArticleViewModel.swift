@@ -55,7 +55,9 @@ extension ArticleListViewModel {
     }
     
     func articleIndex(_ index: Int) -> Article {
-        guard let article = self.articles?[index] else { return Article(title: "", description: "") }
+        guard let article = self.articles?[index] else {
+            return Article(title: "", description: "")
+        }
         return article
     }
     

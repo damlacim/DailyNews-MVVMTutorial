@@ -63,6 +63,7 @@ extension NewsListTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detail", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "detail", sender: self)
     }
 }
