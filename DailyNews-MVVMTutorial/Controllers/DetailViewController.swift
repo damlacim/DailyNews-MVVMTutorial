@@ -13,9 +13,15 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var publishedLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var urlLabel: UILabel!
+    @IBOutlet weak var urlButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func navigateUrl(_ sender: UIButton) {
+        
+    }
+    
+    
 }
