@@ -10,16 +10,15 @@ import Foundation
 
 
 struct ArticleList: Decodable {
-    let articles: [Article]
+    var articles: [Article]
 }
 
 struct Article: Decodable {
     
-    let title: String
-    let description: String
-    let author: String
-    let url: String
-    let urlToImage: String
-    let publishedAt: String
+    var title: String
+    var description: String
+    var url: String
+    var urlToImage: String
+    var publishedAt: String
     
 }

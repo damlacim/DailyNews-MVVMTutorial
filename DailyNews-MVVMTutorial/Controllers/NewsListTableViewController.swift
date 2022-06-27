@@ -10,7 +10,10 @@ import UIKit
 
 class NewsListTableViewController: UITableViewController, ArticleViewControllerDelagate {
     
-    private var articleListVM: ArticleListViewModel!
+    private var articleListVM = ArticleListViewModel()
+    var selectIndex = 0
+   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +21,6 @@ class NewsListTableViewController: UITableViewController, ArticleViewControllerD
     }
     
     private func setup() {
-        articleListVM = ArticleListViewModel()
         subscribeViewModel()
         articleListVM.fetchData()
     }
@@ -64,6 +66,18 @@ extension NewsListTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        selectIndex = indexPath.row
+        print(selectIndex)
         performSegue(withIdentifier: "detail", sender: self)
+       
+        
+    }
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailViewController = segue.destination as? DetailViewController {
+            let articleVM = self.articleListVM.articleIndex(selectIndex)
+            detailViewController.articles = articleVM
+            print(articleVM)
+            
+        }
     }
 }
