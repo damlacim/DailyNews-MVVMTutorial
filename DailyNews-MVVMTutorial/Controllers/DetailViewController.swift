@@ -12,10 +12,11 @@ import Kingfisher
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet weak var newsDetail: UILabel!
+    @IBOutlet weak var pageTitleLabel: UILabel!
     @IBOutlet weak var publishedLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var navigateButton: UIButton!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     var articles: Article?
     
@@ -29,7 +30,8 @@ class DetailViewController: UIViewController {
     }
     
     func updateUI() {
-        articles?.publishedAt = publishedLabel.text!
+        publishedLabel.text = articles?.publishedAt
+        descriptionLabel.text = articles?.description
         image.kf.setImage(with: URL(string: articles!.urlToImage))
     }
     

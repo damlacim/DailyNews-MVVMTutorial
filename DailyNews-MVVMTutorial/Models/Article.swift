@@ -21,4 +21,5 @@ struct Article: Decodable {
     var urlToImage: String
     var publishedAt: String
     
+    
 }

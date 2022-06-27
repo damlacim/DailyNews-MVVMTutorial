@@ -77,52 +77,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMg-8j-ab1">
-                                <rect key="frame" x="35" y="244" width="47" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vry-pe-rxL">
-                                <rect key="frame" x="54" y="344" width="307" height="183"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="r0B-03-PLh">
+                                <rect key="frame" x="0.0" y="140" width="414" height="72"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haber Detay:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoG-7v-ls0">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMg-8j-ab1">
+                                        <rect key="frame" x="0.0" y="51.5" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GoG-7v-ls0" firstAttribute="leading" secondItem="r0B-03-PLh" secondAttribute="leading" constant="30" id="2ed-Bn-QBY"/>
+                                    <constraint firstAttribute="trailing" secondItem="GoG-7v-ls0" secondAttribute="trailing" id="AQn-wv-r10"/>
+                                    <constraint firstItem="GoG-7v-ls0" firstAttribute="top" secondItem="r0B-03-PLh" secondAttribute="top" constant="10" id="AZF-mp-EqZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="aMg-8j-ab1" secondAttribute="trailing" id="PnB-mQ-9Kx"/>
+                                    <constraint firstItem="aMg-8j-ab1" firstAttribute="top" secondItem="GoG-7v-ls0" secondAttribute="bottom" constant="15" id="Uep-Oh-Qig"/>
+                                    <constraint firstItem="aMg-8j-ab1" firstAttribute="leading" secondItem="r0B-03-PLh" secondAttribute="leading" constant="30" id="YKk-Sm-rAl"/>
+                                    <constraint firstAttribute="bottom" secondItem="aMg-8j-ab1" secondAttribute="bottom" id="ZhI-Bc-duz"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JcE-1H-5M3">
+                                <rect key="frame" x="5" y="244" width="404" height="234.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="234.5" id="Mbm-YD-VIn"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haber Detay:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoG-7v-ls0">
-                                <rect key="frame" x="35" y="182" width="140.5" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQS-O1-k5q">
-                                <rect key="frame" x="108" y="593" width="198" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Habere gitmek için tıklayın."/>
-                                <connections>
-                                    <action selector="navigateButtonClicked:" destination="7aa-Wg-xR8" eventType="touchUpInside" id="sPl-vB-ryr"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ycF-H7-yT8">
+                                <rect key="frame" x="0.0" y="478.5" width="414" height="283.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCV-Jn-XDK">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQS-O1-k5q">
+                                        <rect key="frame" x="0.0" y="21.5" width="414" height="262"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Haberin devamı için tıklayın..."/>
+                                        <connections>
+                                            <action selector="navigateButtonClicked:" destination="7aa-Wg-xR8" eventType="touchUpInside" id="sPl-vB-ryr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CCV-Jn-XDK" firstAttribute="leading" secondItem="ycF-H7-yT8" secondAttribute="leading" constant="30" id="JvE-Xm-mmt"/>
+                                    <constraint firstItem="uQS-O1-k5q" firstAttribute="top" secondItem="CCV-Jn-XDK" secondAttribute="bottom" constant="50" id="OEU-R2-UUz"/>
+                                    <constraint firstItem="CCV-Jn-XDK" firstAttribute="top" secondItem="ycF-H7-yT8" secondAttribute="top" constant="30" id="bAV-4a-joo"/>
+                                    <constraint firstAttribute="trailing" secondItem="uQS-O1-k5q" secondAttribute="trailing" constant="65" id="rpi-4B-hvM"/>
+                                    <constraint firstItem="uQS-O1-k5q" firstAttribute="leading" secondItem="ycF-H7-yT8" secondAttribute="leading" constant="65" id="vZ2-eX-BfS"/>
+                                    <constraint firstAttribute="bottom" secondItem="uQS-O1-k5q" secondAttribute="bottom" id="z61-Bi-Zcx"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UZz-mm-sk6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UZz-mm-sk6" firstAttribute="trailing" secondItem="GoG-7v-ls0" secondAttribute="trailing" constant="238.5" id="1kf-Gm-zY1"/>
-                            <constraint firstItem="uQS-O1-k5q" firstAttribute="top" secondItem="Vry-pe-rxL" secondAttribute="bottom" constant="66" id="6WR-dF-FVT"/>
-                            <constraint firstItem="aMg-8j-ab1" firstAttribute="top" secondItem="GoG-7v-ls0" secondAttribute="bottom" constant="32" id="84G-DR-XCy"/>
-                            <constraint firstItem="UZz-mm-sk6" firstAttribute="trailing" secondItem="aMg-8j-ab1" secondAttribute="trailing" constant="332" id="CDs-9Z-CnU"/>
-                            <constraint firstItem="uQS-O1-k5q" firstAttribute="leading" secondItem="UZz-mm-sk6" secondAttribute="leading" constant="108" id="Gbd-YC-Lqc"/>
-                            <constraint firstItem="Vry-pe-rxL" firstAttribute="leading" secondItem="UZz-mm-sk6" secondAttribute="leading" constant="54" id="HTR-Qp-s0e"/>
-                            <constraint firstItem="UZz-mm-sk6" firstAttribute="trailing" secondItem="uQS-O1-k5q" secondAttribute="trailing" constant="108" id="PaM-EL-eW3"/>
-                            <constraint firstItem="GoG-7v-ls0" firstAttribute="top" secondItem="UZz-mm-sk6" secondAttribute="top" constant="42" id="TJD-Tz-Eg2"/>
-                            <constraint firstItem="aMg-8j-ab1" firstAttribute="leading" secondItem="UZz-mm-sk6" secondAttribute="leading" constant="35" id="dcz-W1-2Hm"/>
-                            <constraint firstItem="UZz-mm-sk6" firstAttribute="bottom" secondItem="uQS-O1-k5q" secondAttribute="bottom" constant="238" id="gBC-sa-bxC"/>
-                            <constraint firstItem="UZz-mm-sk6" firstAttribute="trailing" secondItem="Vry-pe-rxL" secondAttribute="trailing" constant="53" id="oAw-d9-LiW"/>
-                            <constraint firstItem="GoG-7v-ls0" firstAttribute="leading" secondItem="UZz-mm-sk6" secondAttribute="leading" constant="35" id="s3J-rZ-sl6"/>
+                            <constraint firstItem="UZz-mm-sk6" firstAttribute="trailing" secondItem="ycF-H7-yT8" secondAttribute="trailing" id="2er-cw-M2U"/>
+                            <constraint firstItem="UZz-mm-sk6" firstAttribute="trailing" secondItem="r0B-03-PLh" secondAttribute="trailing" id="4xz-6Y-Ncc"/>
+                            <constraint firstItem="r0B-03-PLh" firstAttribute="top" secondItem="UZz-mm-sk6" secondAttribute="top" id="AaG-nY-5VP"/>
+                            <constraint firstItem="UZz-mm-sk6" firstAttribute="bottom" secondItem="ycF-H7-yT8" secondAttribute="bottom" constant="100" id="Z0E-qI-PuI"/>
+                            <constraint firstItem="ycF-H7-yT8" firstAttribute="top" secondItem="JcE-1H-5M3" secondAttribute="bottom" id="Zbj-xB-BGY"/>
+                            <constraint firstItem="UZz-mm-sk6" firstAttribute="trailing" secondItem="JcE-1H-5M3" secondAttribute="trailing" constant="5" id="bjo-3W-j6P"/>
+                            <constraint firstItem="JcE-1H-5M3" firstAttribute="leading" secondItem="UZz-mm-sk6" secondAttribute="leading" constant="5" id="cNv-hB-dA7"/>
+                            <constraint firstItem="ycF-H7-yT8" firstAttribute="leading" secondItem="UZz-mm-sk6" secondAttribute="leading" id="dsy-m2-DNl"/>
+                            <constraint firstItem="r0B-03-PLh" firstAttribute="leading" secondItem="UZz-mm-sk6" secondAttribute="leading" id="rkF-bR-pWg"/>
+                            <constraint firstItem="JcE-1H-5M3" firstAttribute="top" secondItem="r0B-03-PLh" secondAttribute="bottom" constant="32" id="tic-ox-k5Q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sRm-I5-UJN"/>
                     <connections>
-                        <outlet property="image" destination="Vry-pe-rxL" id="imH-io-xKz"/>
+                        <outlet property="descriptionLabel" destination="CCV-Jn-XDK" id="4OZ-Vr-nF7"/>
+                        <outlet property="image" destination="JcE-1H-5M3" id="nVN-bN-WOW"/>
                         <outlet property="navigateButton" destination="uQS-O1-k5q" id="Fsm-7u-pSS"/>
-                        <outlet property="newsDetail" destination="GoG-7v-ls0" id="A5Y-BV-4eS"/>
+                        <outlet property="pageTitleLabel" destination="GoG-7v-ls0" id="A5Y-BV-4eS"/>
                         <outlet property="publishedLabel" destination="aMg-8j-ab1" id="q2t-dh-kY3"/>
                     </connections>
                 </viewController>
