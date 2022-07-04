@@ -9,9 +9,7 @@ import Foundation
 import UIKit
 
 class ArticleTableViewCell: UITableViewCell {
-    
+    // MARK: IBOutlet
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
-    
 }

@@ -8,6 +8,7 @@
 import Foundation
 
 class DetailViewModel {
+    // MARK: Function
     func getURL(url: String) -> URL {
         return URL(string: url)!
     }
