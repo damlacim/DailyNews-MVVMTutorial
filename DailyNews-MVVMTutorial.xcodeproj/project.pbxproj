@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		60EA1DE77B08B3587E485FBA /* Pods_DailyNews_MVVMTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92AFFAB0D262E852841AD9F4 /* Pods_DailyNews_MVVMTutorial.framework */; };
 		6CBBB020C6434F35D16477DF /* Pods_DailyNews_MVVMTutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4D99F513BED8E2C73BDD03 /* Pods_DailyNews_MVVMTutorialTests.framework */; };
+		D04733F728732ABC00103825 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04733F628732ABC00103825 /* DetailViewModel.swift */; };
 		D04EB79D285F9B8100282E64 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04EB79C285F9B8100282E64 /* DetailViewController.swift */; };
 		D0F7A28727F32C33008BEE85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7A28627F32C33008BEE85 /* AppDelegate.swift */; };
 		D0F7A28927F32C33008BEE85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7A28827F32C33008BEE85 /* SceneDelegate.swift */; };
@@ -51,6 +52,7 @@
 		7B4D99F513BED8E2C73BDD03 /* Pods_DailyNews_MVVMTutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyNews_MVVMTutorialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		832BC7DA9C6BAE48DF53F171 /* Pods-DailyNews-MVVMTutorial-DailyNews-MVVMTutorialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyNews-MVVMTutorial-DailyNews-MVVMTutorialUITests.release.xcconfig"; path = "Target Support Files/Pods-DailyNews-MVVMTutorial-DailyNews-MVVMTutorialUITests/Pods-DailyNews-MVVMTutorial-DailyNews-MVVMTutorialUITests.release.xcconfig"; sourceTree = "<group>"; };
 		92AFFAB0D262E852841AD9F4 /* Pods_DailyNews_MVVMTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyNews_MVVMTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D04733F628732ABC00103825 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		D04EB79C285F9B8100282E64 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D0F7A28327F32C33008BEE85 /* DailyNews-MVVMTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DailyNews-MVVMTutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F7A28627F32C33008BEE85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +113,6 @@
 				780A688F77061C1247701DAC /* Pods-DailyNews-MVVMTutorialTests.debug.xcconfig */,
 				0F24E21A42CA7C4491A4CC35 /* Pods-DailyNews-MVVMTutorialTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				D0F7A2C027F33CDA008BEE85 /* ArticleListViewModel.swift */,
+				D04733F628732ABC00103825 /* DetailViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -466,6 +468,7 @@
 				D0F7A2B827F32FE5008BEE85 /* NewsListTableViewController.swift in Sources */,
 				D0F7A2BB27F334B0008BEE85 /* WebService.swift in Sources */,
 				D0F7A2C127F33CDA008BEE85 /* ArticleListViewModel.swift in Sources */,
+				D04733F728732ABC00103825 /* DetailViewModel.swift in Sources */,
 				D0F7A28927F32C33008BEE85 /* SceneDelegate.swift in Sources */,
 				D0F7A2C427F34358008BEE85 /* ArticleTableViewCell.swift in Sources */,
 				D0F7A2BE27F33964008BEE85 /* Article.swift in Sources */,

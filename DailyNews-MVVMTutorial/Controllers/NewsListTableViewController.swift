@@ -11,7 +11,7 @@ import UIKit
 class NewsListTableViewController: UITableViewController, ArticleViewControllerDelagate {
     
     private var articleListVM = ArticleListViewModel()
-    var selectIndex = 0
+    private var selectIndex = 0
    
     
     
