@@ -10,7 +10,7 @@ import UIKit
 
 class NewsListTableViewController: UITableViewController, ArticleViewControllerDelagate {
     // MARK: Private Variables
-    private var articleListVM = ArticleListViewModel()
+    private var articleListVM : ArticleListViewModel!
     private var selectIndex = 0
    
     // MARK: Life cycle
@@ -21,6 +21,7 @@ class NewsListTableViewController: UITableViewController, ArticleViewControllerD
     
     // MARK: Private Functions
     private func setup() {
+        callToViewModel()
         subscribeViewModel()
         articleListVM.fetchData()
     }
@@ -39,6 +40,10 @@ class NewsListTableViewController: UITableViewController, ArticleViewControllerD
     }
     
     // MARK: Function
+    func callToViewModel() {
+        self.articleListVM = ArticleListViewModel()
+    }
+    
     func reloadTableView() {
         DispatchQueue.main.async {
             self.tableView.reloadData()

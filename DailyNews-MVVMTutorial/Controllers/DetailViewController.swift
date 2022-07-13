@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     public var articles: Article?
     
     // MARK: private variables
-    private let detailViewModel = DetailViewModel()
+    private var detailViewModel: DetailViewModel!
     
     // MARK: IBOutlets
     @IBOutlet weak var pageTitleLabel: UILabel!
@@ -27,6 +27,7 @@ class DetailViewController: UIViewController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        callToViewModel()
         updateUI()
     }
     
@@ -38,6 +39,10 @@ class DetailViewController: UIViewController {
     }
     
     // MARK: Function
+    private func callToViewModel() {
+        self.detailViewModel = DetailViewModel()
+    }
+    
     private func updateUI() {
         publishedLabel.text = articles?.publishedAt
         descriptionLabel.text = articles?.description
