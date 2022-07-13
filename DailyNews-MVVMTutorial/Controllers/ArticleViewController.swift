@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class NewsListTableViewController: UITableViewController, ArticleViewControllerDelagate {
+class ArticleViewController: UITableViewController, ArticleViewControllerDelagate {
     // MARK: Private Variables
     private var articleListVM : ArticleListViewModel!
     private var selectIndex = 0
@@ -52,7 +52,7 @@ class NewsListTableViewController: UITableViewController, ArticleViewControllerD
 }
 
 // MARK: Extension
-extension NewsListTableViewController {
+extension ArticleViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return self.articleListVM == nil ? 0 : self.articleListVM.numberOfSections
     }
