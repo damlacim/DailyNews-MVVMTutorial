@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ArticleViewController: UITableViewController, ArticleViewControllerDelagate {
+class ArticleViewController: UITableViewController {
     // MARK: Private Variables
     private var articleListVM : ArticleListViewModel!
     private var selectIndex = 0
@@ -44,11 +44,6 @@ class ArticleViewController: UITableViewController, ArticleViewControllerDelagat
         self.articleListVM = ArticleListViewModel()
     }
     
-    func reloadTableView() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-    }
 }
 
 // MARK: Extension

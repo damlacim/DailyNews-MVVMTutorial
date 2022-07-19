@@ -13,15 +13,8 @@ enum ViewState {
     case done
 }
 
-// MARK: Protocol
-protocol ArticleViewControllerDelagate: AnyObject {
-    func reloadTableView()
-}
-
 class ArticleListViewModel {
-    // MARK: Delegate
-    weak var delegate: ArticleViewControllerDelagate?
-    
+ 
     // MARK: Private variables
     private var articles: [Article]?
     private var viewStateBlock: ((ViewState) -> Void)?
@@ -47,7 +40,6 @@ class ArticleListViewModel {
 
 // MARK: Extension
 extension ArticleListViewModel {
-  
     func numberOfRowsInSection(_ section: Int) -> Int {
         return self.articles?.count ?? 0
     }
