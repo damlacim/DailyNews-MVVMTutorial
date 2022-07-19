@@ -47,10 +47,7 @@ class ArticleListViewModel {
 
 // MARK: Extension
 extension ArticleListViewModel {
-    var numberOfSections: Int {
-        return 1
-    }
-    
+  
     func numberOfRowsInSection(_ section: Int) -> Int {
         return self.articles?.count ?? 0
     }
