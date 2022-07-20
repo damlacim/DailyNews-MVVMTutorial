@@ -29,11 +29,11 @@ class ArticleListViewModel {
             return
         }
         self.viewStateBlock?(.loading)
-        WebService().getArticles(url: url) { articles in
+        WebService().getArticles(url: url) { [weak self] articles in
             if let articles = articles {
-                self.articles = articles
+                self?.articles = articles
             }
-            self.viewStateBlock?(.done)
+            self?.viewStateBlock?(.done)
         }
     }
 }
