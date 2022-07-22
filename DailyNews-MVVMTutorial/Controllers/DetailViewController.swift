@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        callToViewModel()
+        callTheViewModel()
         updateUI()
     }
     
@@ -39,7 +39,7 @@ class DetailViewController: UIViewController {
     }
     
     // MARK: Function
-    private func callToViewModel() {
+    private func callTheViewModel() {
         self.detailViewModel = DetailViewModel()
     }
     

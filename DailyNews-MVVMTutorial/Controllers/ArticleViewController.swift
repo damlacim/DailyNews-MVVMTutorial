@@ -21,7 +21,7 @@ class ArticleViewController: UITableViewController {
     
     // MARK: Private Functions
     private func setup() {
-        callToViewModel()
+        callTheViewModel()
         subscribeViewModel()
         articleListVM.fetchData()
     }
@@ -40,7 +40,7 @@ class ArticleViewController: UITableViewController {
     }
     
     // MARK: Function
-    func callToViewModel() {
+    func callTheViewModel() {
         self.articleListVM = ArticleListViewModel()
     }
     
