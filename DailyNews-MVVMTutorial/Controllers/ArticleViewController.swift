@@ -10,9 +10,14 @@ import UIKit
 
 class ArticleViewController: UITableViewController {
     // MARK: Private Variables
-    private var articleListVM : ArticleListViewModel!
+    private var articleListVM : ArticleListViewModel
     private var selectIndex = 0
-   
+    
+    required init?(coder: NSCoder) {
+        articleListVM = ArticleListViewModel()
+        super.init(coder: coder)
+    }
+ 
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +26,6 @@ class ArticleViewController: UITableViewController {
     
     // MARK: Private Functions
     private func setup() {
-        callTheViewModel()
         subscribeViewModel()
         articleListVM.fetchData()
     }
@@ -38,12 +42,6 @@ class ArticleViewController: UITableViewController {
             }
         }
     }
-    
-    // MARK: Function
-    func callTheViewModel() {
-        self.articleListVM = ArticleListViewModel()
-    }
-    
 }
 
 // MARK: Extension
