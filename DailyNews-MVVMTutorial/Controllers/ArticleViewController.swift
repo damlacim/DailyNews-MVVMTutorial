@@ -34,6 +34,7 @@ class ArticleViewController: UITableViewController {
         articleListVM.listenViewModel { [weak self] state in
             switch state {
             case .loading:
+                self?.alert()
                 print("loading")
             case .done:
                 DispatchQueue.main.async {
@@ -41,6 +42,13 @@ class ArticleViewController: UITableViewController {
                 }
             }
         }
+    }
+    
+    private func alert() {
+        let alertController = UIAlertController(title: "Warning!", message: "No response from API. The news is loading.", preferredStyle: .alert)
+        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(actionCancel)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 
